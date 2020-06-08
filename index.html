@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body class="container">
+    <div class="mx-auto">
+
+        <div class="text-center">
+            <h4>Seleccione su tipo de préstamo</h4>
+            <form action="" class="my-4 d-flex text-center justify-content-between">
+                <div>
+                    <input onchange="onChange()" type="radio" name="loan" id="rb_mini">
+                    <label for="rb_mini" class="ml-1 mr-3">Mini-préstamo</label>
+                </div>
+                <div><input onchange="onChange()" type="radio" name="loan" id="rb_personal" checked="checked">
+                    <label for="rb_personal" class="ml-1 mr-3">Préstamo personal</label>
+                </div>
+                <div><input onchange="onChange()" type="radio" name="loan" id="rb_mortgage">
+                    <label for="rb_mortgage" class="ml-1 mr-3">Préstamo hipotecario</label>
+                </div>
+            </form>
+        </div>
+
+        <div class="mb text-center">
+            <h4 class="mb-3">¿Cuánto dinero necesita?</h4>
+            <h4 class="mx-auto" id="money_amount"></h4>
+            <div class="range-wrap">
+                <div class="range-value text-center" id="range_v"></div>
+                <input type="range" class="slider" min="0" step="1" max="100" value="1" id="money_range" />
+            </div>
+        </div>
+
+        <div id="time_block" class="text-center">
+            <h4 class="mb-3">Elija su plazo en años</h4>
+            <h4 class="mx-auto" id="time_amount"></h4>
+            <div class="range-wrap"></div>
+                <div class="range-value" id="range_v_time"></div>
+                <input type="range" class="slider" min="1" step="1" max="25" value="1" id="time_range" />
+            </div>
+        </div>
+
+        <div class="totales text-center">
+            <div class="text-sm text-bold" id="payment">
+                Cuota mensual: <h4 id="fee" class="font-weight-bold"></h4>
+            </div>
+            <div class="text-sm text-bold">
+                Total a cancelar: <h4 id="total" class="font-weight-bold"></h4>
+            </div>
+        </div>
+
+        <div id="message"></div>
+
+    </div>
+
+</body>
+
+<script type="text/javascript" src="main.js"></script>
+
+</html>
